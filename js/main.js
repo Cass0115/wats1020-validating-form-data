@@ -18,7 +18,7 @@ $(function(){
       'your-name':{
         required:true,
         maxlength:128,
-      
+        lettersonly: true
       },
 
       'your-zip':{
