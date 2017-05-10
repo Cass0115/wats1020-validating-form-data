@@ -44,7 +44,7 @@
           <div class="form-group required">
             <label class="col-sm-3 control-label" for="your-name"><span class="glyphicon glyphicon-question-sign" title="Your first and last name."></span> Your Name</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" name="your-name" id="your-name" placeholder="Your Name">
+              <input type="text" class="form-control" name="your-name" id="your-name" placeholder="Your Name" required>
             </div>
             <!-- TODO: Make validation for name according to these rules:
                  * Name must be fewer than 128 characters.
@@ -54,34 +54,31 @@
           <div class="form-group required">
             <label class="col-sm-3 control-label" for="your-address">Street Address</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" name="your-address" id="your-address" placeholder="Your Street Address">
-            </div>
-            <!-- TODO: Make validation for street address according to these rules:
-                  * Field must not be blank
-                  -->
+              <input type="text" class="form-control" name="your-address" id="your-address" placeholder="Your Street Address" required>
+            </div> <!-- Street Address-->
+
           </div>
           <div class="form-group">
             <label class="col-sm-3 control-label" for="your-address2">Street Address (additional)</label>
             <div class="col-sm-9">
               <input type="text" class="form-control" name="your-address2" id="your-address2" placeholder="Your Street Address (additional)">
             </div>
-          </div>
+          </div><!--Additional street address -->
+
           <div class="form-group required">
             <label class="col-sm-3 control-label" for="your-city">City</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" name="your-city" id="your-city" placeholder="Your City">
-            </div>
-            <!-- TODO: Make validation for city according to these rules:
-                  * Field must not be blank
-                  -->
+              <input type="text" class="form-control" name="your-city" id="your-city" placeholder="Your City" required>
+            </div> <!-- City  -->
+
           </div>
           <div class="form-group required">
             <label class="col-sm-3 control-label" for="your-state"><span class="glyphicon glyphicon-question-sign" title="Two-letter state abbreviation."></span> State</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" name="your-state" id="your-state" placeholder="Your State">
+              <input type="text" class="form-control" name="your-state" id="your-state" placeholder="Your State" required>
             </div>
             <!-- TODO: Make validation for state according to these rules:
-                  * Field must not be blank
+
                   * Field must contain exactly two letters
                   * (Stretch Goal: If possible, verify that the 2-letter combo matches with known state abbreviations.)
                   -->
@@ -223,12 +220,14 @@
       <footer>
         <p>&copy; Jane Student 2015</p>
       </footer>
-    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    </div> <!-- /container -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/vendor/jquery.validate.min.js"></script>
-
+        <script src="additional-methods.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
