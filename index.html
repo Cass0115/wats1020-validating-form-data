@@ -38,18 +38,15 @@
     <div class="container">
       <p class="lead">Please note: This form is only for validation demonstration purposes. Do not enter real payment information; please use imaginary data.</p>
       <form class="form-horizontal" role="form" action="thank-you.html" method="get" id="order-form">
-      <!-- TODO: Add a general validation check so that any field contained in a `div.form-group. required` will be required to have information when the user submits the form. -->
         <fieldset>
           <legend>Your Information</legend>
+
           <div class="form-group required">
             <label class="col-sm-3 control-label" for="your-name"><span class="glyphicon glyphicon-question-sign" title="Your first and last name."></span> Your Name</label>
             <div class="col-sm-9">
               <input type="text" class="form-control" name="your-name" id="your-name" placeholder="Your Name" required>
-            </div>
-            <!-- TODO: Make validation for name according to these rules:
-                 * Name must be fewer than 128 characters.
-                 * Name may not contain any numbers.
-                 -->
+            </div> <!-- Name -->
+
           </div>
           <div class="form-group required">
             <label class="col-sm-3 control-label" for="your-address">Street Address</label>
@@ -76,10 +73,10 @@
             <label class="col-sm-3 control-label" for="your-state"><span class="glyphicon glyphicon-question-sign" title="Two-letter state abbreviation."></span> State</label>
             <div class="col-sm-9">
               <input type="text" class="form-control" name="your-state" id="your-state" placeholder="Your State" required>
-            </div>
+            </div> <!-- State -->
+
             <!-- TODO: Make validation for state according to these rules:
 
-                  * Field must contain exactly two letters
                   * (Stretch Goal: If possible, verify that the 2-letter combo matches with known state abbreviations.)
                   -->
           </div>
@@ -88,12 +85,8 @@
             <div class="col-sm-9">
               <input type="text" class="form-control" name="your-zip" id="your-zip" placeholder="Your ZIP Code">
             </div>
-            <!-- TODO: Make validation for ZIP according to these rules:
-                  * Field must not be blank
-                  * Field must be an integer (only whole numbers)
-                  * Field must have 5 digits
-                  -->
-          </div>
+          </div> <!-- zip code-->
+
         </fieldset>
         <fieldset>
           <legend>Payment</legend>
@@ -112,21 +105,14 @@
             <div class="col-sm-9">
               <input type="text" class="form-control" name="card-number" id="card-number" placeholder="Debit/Credit Card Number">
             </div>
-            <!-- TODO: Make validation for card number according to these rules:
-                  * Field must not be blank
-                  * Field must contain only numbers and spaces (no other characters)
-                  * Field must contain 16 digits
+          </div><!-- creditcard  -->
 
-                  WHEN TESTING THIS, USE THE UNIVERSAL TEST CARD NUMBER:
-                  0000 0000 0000 0000
-                  -->
-          </div>
           <div class="form-group required">
             <label class="col-sm-3 control-label" for="expiry-month">Expiration Date</label>
             <div class="col-sm-9">
               <div class="row">
                 <div class="col-xs-3">
-                  <select class="form-control col-sm-2" name="expiry-month" id="expiry-month">
+                  <select class="form-control col-sm-2" name="expiry-month" id="expiry-month" required>
                     <option>Month</option>
                     <option value="01">Jan (01)</option>
                     <option value="02">Feb (02)</option>
@@ -143,9 +129,7 @@
                   </select>
                 </div>
                 <div class="col-xs-3">
-                  <select class="form-control" name="expiry-year">
-                    <option value="15">2015</option>
-                    <option value="16">2016</option>
+                  <select class="form-control" name="expiry-year" required>
                     <option value="17">2017</option>
                     <option value="18">2018</option>
                     <option value="19">2019</option>
@@ -218,16 +202,16 @@
       <hr>
 
       <footer>
-        <p>&copy; Jane Student 2015</p>
+        <p>&copy; Cassidy Durr 2017</p>
       </footer>
     </div> <!-- /container -->
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <!--  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/vendor/jquery.validate.min.js"></script>
-        <script src="additional-methods.min.js"></script>
+        <script src="js/vendor/additional-methods.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

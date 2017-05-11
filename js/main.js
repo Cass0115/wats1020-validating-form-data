@@ -18,8 +18,9 @@ $(function(){
       'your-name':{
         required:true,
         maxlength:128,
-        lettersonly: true
+        
       },
+
 
       'your-zip':{
         maxlength: 5,
@@ -28,7 +29,14 @@ $(function(){
 
       'card-number':{
         required:true,
-        creditcard: true
+        creditcard: true,
+        number: true
+      },
+
+      'your-state':{
+        required:true,
+        maxlength:2
+
       }
     }
 
