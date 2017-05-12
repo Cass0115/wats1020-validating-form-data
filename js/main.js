@@ -8,19 +8,19 @@
 // Refer to the `index.html` file for the validation rules that must be enforced.
 $(function(){
   $('div.form-group').prop('required',true);
-
+  // function for using only letters and spaces:
     $.validator.addMethod('withSpaces', function(value, element){
       return value.match(/^[a-zA-Z ]+$/);
 
     }, "Please only use letters and spaces."
   );
 
-
+  // validating the form once submit is clicked 
   $('#order-form').validate({
     submitHandler: function(form) {
       form.submit();
     },
-
+    // all the rules for each class:
     rules:{
       'your-name':{
         required:true,
