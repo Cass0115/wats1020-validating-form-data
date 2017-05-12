@@ -9,6 +9,13 @@
 $(function(){
   $('div.form-group').prop('required',true);
 
+    $.validator.addMethod('withSpaces', function(value, element){
+      return value.match(/^[a-zA-Z ]+$/);
+
+    }, "Please only use letters and spaces."
+  );
+
+
   $('#order-form').validate({
     submitHandler: function(form) {
       form.submit();
@@ -17,29 +24,43 @@ $(function(){
     rules:{
       'your-name':{
         required:true,
-        maxlength:128,
-        
+        maxlength :128,
+        withSpaces: true
       },
-
 
       'your-zip':{
         maxlength: 5,
         digits:true
       },
 
+      'card-holder-name':{
+        required:true,
+        maxlength:128,
+        withSpaces: true
+      },
+
       'card-number':{
         required:true,
         creditcard: true,
-        number: true
+        digits: true
+      },
+
+      'cvv':{
+        required:true,
+        digits:true,
+        maxlength:3
       },
 
       'your-state':{
         required:true,
         maxlength:2
+      },
 
+      'comments':{
+        maxlength:500,
       }
-    }
 
 
+      } //rules
   }); // order-form
 }); //document function

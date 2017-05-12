@@ -83,7 +83,7 @@
           <div class="form-group required">
             <label class="col-sm-3 control-label" for="your-zip"><span class="glyphicon glyphicon-question-sign" title="US ZIP code only."></span> ZIP</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" name="your-zip" id="your-zip" placeholder="Your ZIP Code">
+              <input type="text" class="form-control" name="your-zip" id="your-zip" placeholder="Your ZIP Code" required>
             </div>
           </div> <!-- zip code-->
 
@@ -93,17 +93,14 @@
           <div class="form-group required">
             <label class="col-sm-3 control-label" for="card-holder-name"><span class="glyphicon glyphicon-question-sign" title="First and last name shown on card."></span> Name on Card</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" name="card-holder-name" id="card-holder-name" placeholder="Card Holder's Name">
+              <input type="text" class="form-control" name="card-holder-name" id="card-holder-name" placeholder="Card Holder's Name" required>
             </div>
-            <!-- TODO: Make validation for name on card according to these rules:
-                  * Field must not be blank
-                  * Field must conform to same name requirements as above.
-                  -->
-          </div>
+          </div><!-- credit card name-->
+
           <div class="form-group required">
             <label class="col-sm-3 control-label" for="card-number"><span class="glyphicon glyphicon-question-sign" title="Test card number: 0000 0000 0000 0000"></span> Card Number</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" name="card-number" id="card-number" placeholder="Debit/Credit Card Number">
+              <input type="text" class="form-control" name="card-number" id="card-number" placeholder="Debit/Credit Card Number" required>
             </div>
           </div><!-- creditcard  -->
 
@@ -141,21 +138,15 @@
                 </div>
               </div>
             </div>
-            <!-- TODO: Make validation for Expiration Date according to these rules:
-                  * Fields must not be blank
-                  -->
-          </div>
+          </div><!-- creditcard expiration -->
+
           <div class="form-group required">
             <label class="col-sm-3 control-label" for="cvv"><span class="glyphicon glyphicon-question-sign" title="Three-digit code from back of card."></span> Card CVV</label>
             <div class="col-sm-3">
-              <input type="text" class="form-control" name="cvv" id="cvv" placeholder="Security Code">
+              <input type="text" class="form-control" name="cvv" id="cvv" placeholder="Security Code" required>
             </div>
-            <!-- TODO: Make validation for CVV according to these rules:
-                  * Field must not be blank
-                  * Field must only contain numbers
-                  * Field must have 3 digits
-                  -->
-          </div>
+          </div><!-- cvv -->
+
         </fieldset>
         <fieldset>
           <legend>Additional Information</legend>
@@ -164,7 +155,7 @@
             <div class="col-sm-9">
               <div class="row">
                 <div class="col-xs-3">
-                  <select class="form-control col-sm-2" name="shipping-method" id="shipping-method">
+                  <select class="form-control col-sm-2" name="shipping-method" id="shipping-method" required>
                     <option>Select One</option>
                     <option value="Ground">Ground</option>
                     <option value="Air">Air</option>
@@ -175,21 +166,15 @@
                 </div>
               </div>
             </div>
-            <!-- TODO: Make validation for shipping method according to these rules:
-                  * Field must not be blank
-                  -->
-          </div>
+          </div><!-- shipping method-->
+
           <div class="form-group">
             <label class="col-sm-3 control-label" for="comments">Special Instructions</label>
             <div class="col-sm-9">
               <textarea cols="80" rows="8" class="form-control" name="comments" id="comments" placeholder="Comments"></textarea>
             </div>
-            <!-- TODO: Make validation for street address according to these rules:
-                  * Field may be blank
-                  * If field is not blank, it must be less than 500 characters.
-                  * Field may contain any characters
-                  -->
-          </div>
+          </div><!-- comments -->
+
           <div class="form-group">
             <div class="col-sm-offset-3 col-sm-9">
               <button type="submit" class="btn btn-success"> <span class="glyphicon glyphicon-shopping-cart"></span> Check Out!</button>
@@ -206,7 +191,7 @@
       </footer>
     </div> <!-- /container -->
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
